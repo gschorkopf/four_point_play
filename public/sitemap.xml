@@ -1,15 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2014-05-04T18:12:18-04:00</lastmod>
+        <loc>
+            http://four-point-play.herokuapp.com/blog/2014/05/04/metaprogramming-for-beginners/
+        </loc>
+        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/</loc>
-        <lastmod>2014-05-04T18:12:18-04:00</lastmod>
+        <loc>
+            http://four-point-play.herokuapp.com/blog/2014/05/04/why-the-spurs-will-win-it-all-a-bulls-fans-perspective/
+        </loc>
+        <lastmod>2014-05-04T18:37:10-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/robots.txt</loc>
+        <loc>http://four-point-play.herokuapp.com/blog/archives/</loc>
+        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://four-point-play.herokuapp.com/</loc>
+        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://four-point-play.herokuapp.com/robots.txt</loc>
         <lastmod>2014-05-04T18:12:18-04:00</lastmod>
     </url>
 </urlset>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Four Point Play]]></title>
-  <link href="http://four-point-play.herokuapp.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Coding | Four Point Play]]></title>
+  <link href="http://four-point-play.herokuapp.com/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
   <updated>2014-05-04T18:37:14-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Why the Spurs Will Win It All - a Bulls Fan's Perspective]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/05/04/why-the-spurs-will-win-it-all-a-bulls-fans-perspective/"/>
-    <updated>2014-05-04T18:36:06-04:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/05/04/why-the-spurs-will-win-it-all-a-bulls-fans-perspective</id>
-    <content type="html"><![CDATA[<p>It pains me to say it. But the Spurs are the boring and best choice to win it all.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Metaprogramming for Beginners]]></title>
