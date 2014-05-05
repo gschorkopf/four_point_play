@@ -4,10 +4,10 @@
 
 url: http://four-point-play.herokuapp.com
 title: Four-Point Play
-subtitle: A blog on basketball, philosophy, coding, medicine, drugs, etc.
+subtitle: A blog on basketball, music, philosophy, coding, medicine, drugs, etc.
 author: Logesh and Geoff
 simple_search: https://www.google.com/search
-description:
+description: Blah blah blah description about our site
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
