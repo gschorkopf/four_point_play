@@ -4,24 +4,28 @@
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/05/04/metaprogramming-for-beginners/
         </loc>
-        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/05/04/why-the-spurs-will-win-it-all-a-bulls-fans-perspective/
         </loc>
-        <lastmod>2014-05-04T18:37:10-04:00</lastmod>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/archives/</loc>
-        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/</loc>
-        <lastmod>2014-05-04T18:37:13-04:00</lastmod>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://four-point-play.herokuapp.com/posts/</loc>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/robots.txt</loc>
-        <lastmod>2014-05-04T18:12:18-04:00</lastmod>
+        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
     </url>
 </urlset>
