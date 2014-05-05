@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Coding | Four Point Play]]></title>
+  <title><![CDATA[Category: Coding | Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2014-05-04T18:37:14-04:00</updated>
+  <updated>2014-05-05T15:20:23-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
