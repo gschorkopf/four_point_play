@@ -1,28 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>
-            http://four-point-play.herokuapp.com/blog/2014/05/04/metaprogramming-for-beginners/
-        </loc>
-        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://four-point-play.herokuapp.com/blog/2014/05/04/why-the-spurs-will-win-it-all-a-bulls-fans-perspective/
-        </loc>
-        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
+        <loc>http://four-point-play.herokuapp.com/blog/2014/05/06/movie-review-lola-versus/</loc>
+        <lastmod>2014-05-06T22:30:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/archives/</loc>
-        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
+        <lastmod>2014-05-06T22:30:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/</loc>
-        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
+        <lastmod>2014-05-06T22:30:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/posts/</loc>
-        <lastmod>2014-05-05T14:59:12-04:00</lastmod>
+        <lastmod>2014-05-06T22:30:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/robots.txt</loc>

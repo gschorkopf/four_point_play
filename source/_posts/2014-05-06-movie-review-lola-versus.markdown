@@ -4,12 +4,14 @@ title: "Movie Review: Lola Versus"
 date: 2014-05-06 19:06
 comments: true
 author: I.I.
-categories: film greta gerwig 
+categories: film greta gerwig
 ---
 
 Director: Daryl Wein
 Runtime: 87 minutes
 Cast: Greta Gerwig, Hamish Linklater, Zoe Lister-Jones
+
+<!--more-->
 
 This hidden gem has been lying on my coffee table for two months after I picked it up for under five bucks at my local video store. It was part of a double feature purchase which also included Evil Dead, to be reviewed shortly. The sole reason it caught my eye was because of Ms. Gerwig’s mesmerizing performance as Frances Ha’s titular heroine in one of the best movies of 2012. Director and co-writer Noah Baumbach left his wife and child during this collaboration, so it’s not just me that is caught in her magnetic field. And she will go on to reboot the How I Met Your Mother franchise by drudging through the story of HSMHH in HIMYD. HIMYM is one of my favorite sitcoms,  dare I say the Friends of my generation, and it has been endlessly renewed past its expiration date. Part of the reason, I presume, the finale felt so foreign to many viewers. My opinion, I loved how they ended things. But, it does a lot to sooth my anxieites that this spinoff will be anchored by this capable, indie star.
 
