@@ -17,4 +17,6 @@ Before all her recent success, this film showcased her remarkable talent. It cen
 
 While we get some fun situations in the story of Lola dealing with the stresses of her romantic life, I am left wondering why she constantly befuddles her own attempts at growth. It seems to be assumed that this how women her age in this culture deal with life. Her stagnation turns quickly into frustration for the viewer who has learned the lessons that romantic comedies have to teach us. "You’re making all the classic mistakes!", you want to yell at the hapless girl. Her parents' sage advice is the proxy for the omniscient viewer, which Lola promptly ignores in the scenes after they appear. As she showed in the far superior, Frances Ha, which revolves around the same topics, one can mine the depths of the relationships between friends and lovers, while still being funny. I am scared that CBS execs saw this movie and thought that we could get Greta Gerwig easily drag out her romantic growth through 9 seasons as she did through this hour-and-a-half movie. It is a waste of her talent, but good exploitation of her appeal.
 
+“Whatever, chicks love old phones. They think I listen more or something.”
+
 -I.I.
