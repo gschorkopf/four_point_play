@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Four-Point Play]]></title>
+  <link href="http://four-point-play.herokuapp.com/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://four-point-play.herokuapp.com/"/>
+  <updated>2014-05-11T20:08:57-04:00</updated>
+  <id>http://four-point-play.herokuapp.com/</id>
+  <author>
+    <name><![CDATA[Logesh and Geoff]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Refactoring Complex Validations From Your Models]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models/"/>
+    <updated>2014-05-10T18:55:24-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models</id>
+    <content type="html"><![CDATA[<p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. But when Rails models become a dumping ground for all things even tangentally related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
+
+<!--more-->
+
+
+<p>One way to do that is to pare away complex validations. For example, you might think it wise to drum up a method or two to handle passwords (minimum 8 characters! minimum one number! no weird symbols! etc.) So you throw these methods into the private domain of your User class, and call it a day.</p>
+
+<p>But you can (and should) probably move that logic elsewhere. The following is usually how my complexity validator looks:</p>
+
+<p>We have a simple User model.</p>
+
+<p>``` ruby</p>
+
+<h1>app/models/user.rb</h1>
+
+<p>class User &lt; ActiveRecord::Base
+  validates :password, complexity: true
+end
+```</p>
+
+<p>Which hides away logic that&rsquo;s not even really related to a User. You can inherit from the ActiveModel::EachValidator class, like so:</p>
+
+<p>``` ruby</p>
+
+<h1>app/validators/complexity_validator.rb</h1>
+
+<p>class ComplexityValidator &lt; ActiveModel::EachValidator
+  def validate_each(record, attribute, value)</p>
+
+<pre><code>record.errors.add(attribute, "must have a number")              if value !~ /(?=.*\d)/
+record.errors.add(attribute, "must have a lowercase letter")    if value !~ /(?=.*[a-z])/
+record.errors.add(attribute, "must have an uppercase letter")   if value !~ /(?=.*[A-Z])/
+record.errors.add(attribute, "must have a special character")   if value !~ /(?=.*[\W])/
+record.errors.add(attribute, "must have at least 8 characters") if value.length &lt; 8
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>And to tidy things up on the view end, consider the following for error handling:</p>
+
+<p>``` ruby</p>
+
+<h1>app/views/users/new.html.erb</h1>
+
+<h1>&hellip;</h1>
+
+<p>= f.input :password, label: &ldquo;New Password&rdquo;, error_method: :to_sentence</p>
+
+<h1>&hellip;</h1>
+
+<p>```</p>
+
+<p>to_sentence is built into ActiveSupport, and helps us show all errors in a user-friendly way. <a href="http://apidock.com/rails/ActiveSupport/CoreExtensions/Array/Conversions/to_sentence">Check it out</a>.</p>
+
+<ul>
+<li>GPS</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
