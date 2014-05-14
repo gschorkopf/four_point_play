@@ -6,13 +6,13 @@ comments: true
 categories: code rails
 ---
 
-You've probably heard the phrase "fat models, skinny controllers" before. But when Rails models become a dumping ground for all things even tangentally related to the original class, it's probably time to trim off a few pounds.
+You've probably heard the phrase "fat models, skinny controllers" before. This misconception of "fat models": that "it's okay for models to be very large and unwieldy". But when Rails models become a dumping ground for all things even tangentially related to the original class, it's probably time to trim off a few pounds.
 
 <!--more-->
 
-One way to do that is to pare away complex validations. For example, you might think it wise to drum up a method or two to handle passwords (minimum 8 characters! minimum one number! no weird symbols! etc.) So you throw these methods into the private domain of your User class, and call it a day.
+One way to do that is to pare away complex validations. For example, you might think it wise to drum up a method or two to handle passwords (minimum 8 characters! minimum one number! no weird symbols! etc.) So you throw these methods into the private domain of your User class, and call it a day. But you can (and should) probably move that logic elsewhere.
 
-But you can (and should) probably move that logic elsewhere. Let's start with what not to do:
+Let's start with what not to do:
 
 ```ruby
 class User < ActiveRecord::Base
@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-And that's fine. It works. But is password complexity really the User's responsibilty? What if you had an Admin or Account or Enterprise model that required some sort of password? Surely you wouldn't duplicate your efforts there?
+And that's fine. It works. But is password complexity really the User's responsibilty? What if you had an Admin or Account or Enterprise model that required some sort of password? Surely you wouldn't [duplicate](http://en.wikipedia.org/wiki/Don't_repeat_yourself) your efforts there?
 
 So let's simplify our User model down to this:
 
@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-Wow. Such elegance. Very simplicity. Amaze.
+Wow. Such elegant. Very simplicity. [Amaze.](http://knowyourmeme.com/memes/doge)
 
 But how does this ```complexity: true``` work? Behind the scenes, we hide away that original logic that's not even really related to a User. You can inherit from the ActiveModel::EachValidator class, like so:
 
