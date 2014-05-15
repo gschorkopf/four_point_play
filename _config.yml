@@ -6,7 +6,7 @@ url: http://four-point-play.com
 title: Four-Point Play
 subtitle: A blog on basketball, music, philosophy, coding, medicine, drugs, etc.
 author: I.I. and GPS
-simple_search: https://www.google.com/search
+simple_search:
 description: One part Indian Lumnati, one part GeoSpec
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
