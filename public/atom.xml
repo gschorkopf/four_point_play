@@ -4,7 +4,7 @@
   <title><![CDATA[Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2014-05-13T23:57:20-04:00</updated>
+  <updated>2014-05-15T12:05:10-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -18,7 +18,7 @@
     <link href="http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models/"/>
     <updated>2014-05-10T18:55:24-04:00</updated>
     <id>http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models</id>
-    <content type="html"><![CDATA[<p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. This misconception of &ldquo;fat models&rdquo;: that &ldquo;it&rsquo;s okay for models to be very large and unwieldy&rdquo;. But when Rails models become a dumping ground for all things even tangentially related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
+    <content type="html"><![CDATA[<p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. The misconception of &ldquo;fat models&rdquo;: that it&rsquo;s okay for models to be very large and unwieldy. But when Rails models become a dumping ground for all things even tangentially related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
 
 <!--more-->
 
