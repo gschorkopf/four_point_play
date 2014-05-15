@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://four-point-play.herokuapp.com
+url: http://four-point-play.com
 title: Four-Point Play
 subtitle: A blog on basketball, music, philosophy, coding, medicine, drugs, etc.
-author: Logesh and Geoff
+author: I.I. and GPS
 simple_search: https://www.google.com/search
-description: Blah blah blah description about our site
+description: One part Indian Lumnati, one part GeoSpec
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
