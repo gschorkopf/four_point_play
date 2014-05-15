@@ -37,4 +37,4 @@ Suddenly, a particularly obstinate pain patient wasn’t feeling too bad anymore
 
 Medical professionalism is the relationship we are able to develop with our patients and our coworkers. It goes beyond making someone else feel warm & fuzzy. In this field, a person’s healthy and vitality, and sometimes life or limb, is on the line. What matters most is being able to trust a patient’s testimony, them reciprocating the trust, and the team trusting each other to get the job done quickly and correctly. But no one is going to open up to a person who doesn’t seem comfortable around them. Either due to their starched white coat and constricting neck tie or the way they don’t seem to care about you more than as a disease process. 
 
-- I.I
+- I.I.
