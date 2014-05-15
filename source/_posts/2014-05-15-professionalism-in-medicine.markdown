@@ -26,7 +26,9 @@ The true essence of professionalism in medicine is the doctor who respects and t
 
 
 One afternoon, my faculty mentor came by the hospital and showed me how it was done. Unabashedly, he started with non-sequitur icebreakers like it was summer camp, instead of the scripted, remote “What brings you to the hospital/clinic/ER today?” And he pushes for answers. 
-> “I dunno…” “Come on there must be something you like doing in your free time?” “I guess my I really enjoy playing with my 4yo daughter.” 
+> “I dunno…” 
+> “Come on there must be something you like doing in your free time?” 
+> “I guess I really enjoy playing with my 4yo daughter.” 
 
 Suddenly, a particularly obstinate pain patient wasn’t feeling too bad anymore.
 
