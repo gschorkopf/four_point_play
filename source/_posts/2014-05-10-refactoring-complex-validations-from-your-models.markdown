@@ -6,7 +6,7 @@ comments: true
 categories: code rails
 ---
 
-You've probably heard the phrase "fat models, skinny controllers" before. This misconception of "fat models": that "it's okay for models to be very large and unwieldy". But when Rails models become a dumping ground for all things even tangentially related to the original class, it's probably time to trim off a few pounds.
+You've probably heard the phrase "fat models, skinny controllers" before. Some folks misconceive "fat models" to mean "it's okay for models to be very large and unwieldy -- as long as it ain't in the controller." But when Rails models become a dumping ground for all things even tangentially related to the original class, it's probably time to trim off a few pounds.
 
 <!--more-->
 
