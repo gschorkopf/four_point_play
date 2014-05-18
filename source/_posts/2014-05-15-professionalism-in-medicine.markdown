@@ -9,6 +9,7 @@ categories: [medicine, professionalism, medical school]
 ---
 
 We are comporting ourselves in every situation, subconsciously considering our role, our expectations, the other parties’ expectations, and our prior experiences. In this coffee shop, I am a customer expecting quiet, because that is the unspoken pact I share with the afternoon crowd that frequents this place. I distinctly remember a philosophy course when I brought up how we are different people to different people, and a Laker purple-and-gold clad loudmouth was taken aback. She seemed to argue that it demonstrated purity to be the same to all people all the time. Maybe it is because we slip so effortlessly into these skins, that some people are unaware. A refusal to acknowledge this socially lubricating farce could underpin those stubborn people who can’t seem to get along with anyone. An inability to adapt can be a stressful way to live.
+
 <!--more-->
 
 Many of our "professional" lives are a journey into learning the rules of how to behave in our workplace environs. How should I dress? What are the right things to do to make the boss see that I’m valuable? Should I be networking more? Some people find mentors whose habits they mimic to fit in better. It is an organic process, of how an individual integrates into a group.
