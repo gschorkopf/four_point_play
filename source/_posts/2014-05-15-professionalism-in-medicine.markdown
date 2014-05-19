@@ -4,7 +4,6 @@ title: "Professionalism in Medicine"
 date: 2014-05-15 13:39
 comments: true
 author: I.I.
-published: false
 categories: [medicine, professionalism, medical school]
 ---
 
