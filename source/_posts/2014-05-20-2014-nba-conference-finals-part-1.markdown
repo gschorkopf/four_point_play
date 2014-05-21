@@ -3,7 +3,7 @@ layout: post
 title: "2014 NBA Conference Finals - Part 1"
 date: 2014-05-20 16:50:54 -0400
 comments: true
-categories: basketball, playoffs
+categories: basketball playoffs
 ---
 
 Part 1 in I.I. and GPS's series on the NBA Conference Finals. We talk about whether the Heat should worry, Scotty Brook's tough decision, and Charles Barkley actin' a fool.
