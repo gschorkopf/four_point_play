@@ -6,9 +6,11 @@ comments: true
 categories: basketball, playoffs
 ---
 
-<strong>I.I.</strong>: The match-ups are set! On both sides the top two seeds are squaring off. A bipolar Pacers team stumbled to the conference finals against the Eastern conference favorite Heat. The MVP-led Thunder, minus Serge Ibaka, will take on Popovich's Spurs. So GeoSpec, what are your thoughts?
+Part 1 in I.I. and GPS's series on the NBA Conference Finals. We talk about whether the Heat should worry, Scotty Brook's tough decision, and Charles Barkley actin' a fool.
 
 <!--more-->
+
+<strong>I.I.</strong>: The match-ups are set! On both sides the top two seeds are squaring off. A bipolar Pacers team stumbled to the conference finals against the Eastern conference favorite Heat. The MVP-led Thunder, minus Serge Ibaka, will take on Popovich's Spurs. So GeoSpec, what are your thoughts?
 
 Will the Thunder's young guns wear out a veteran Spurs team that closed out the series against Portland with their bench? Will the Pacers surprise us by taking a couple games on the road against the Heat, as they are apt to do? And what about the big 'ol woman down in San Antonio? Will they come to some sort of truce with Charles Barkley?
 
