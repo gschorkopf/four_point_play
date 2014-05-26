@@ -4,8 +4,9 @@ title: "Movie Review: Lola Versus"
 date: 2014-05-06 19:06
 comments: true
 author: I.I.
-categories: [film, greta gerwig]
+categories: [film "greta gerwig"]
 ---
+![alt text](https://github.com/gschorkopf/four_point_play/blob/master/source/images/Lola_Versus.jpg "Lola Versus")
 
 Director: Daryl Wein<br/>
 Runtime: 87 minutes<br/>
