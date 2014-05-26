@@ -3,6 +3,7 @@ layout: post
 title: "The Facade Pattern In Ruby"
 date: 2014-05-22 13:25:26 -0400
 comments: true
+published: false
 categories: code ruby
 ---
 
