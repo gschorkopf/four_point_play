@@ -7,7 +7,7 @@ title: Four-Point Play
 subtitle: A blog on basketball, music, philosophy, coding, medicine, drugs, etc.
 author: I.I. and GPS
 simple_search:
-description: One part Indian Lumnati, one part GeoSpec
+description: One part Indian Illumnati, one part GeoSpec
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -69,7 +69,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: IndianLuminati
 twitter_tweet_button: true
 
 # Google +1
