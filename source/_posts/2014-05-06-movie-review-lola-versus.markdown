@@ -6,7 +6,7 @@ comments: true
 author: I.I.
 categories: [film "greta gerwig"]
 ---
-![alt text](https://github.com/gschorkopf/four_point_play/blob/master/source/images/Lola_Versus.jpg "Lola Versus")
+![alt text](source/images/Lola_Versus.jpg "Lola Versus")
 
 Director: Daryl Wein<br/>
 Runtime: 87 minutes<br/>
