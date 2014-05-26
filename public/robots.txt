@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://four-point-play.herokuapp.com/sitemap.xml 
