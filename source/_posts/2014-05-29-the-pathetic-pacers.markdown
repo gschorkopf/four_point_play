@@ -6,6 +6,8 @@ comments: true
 categories: basketball
 ---
 
+![alt text](/images/lance.png "Lance Acting a Clown")
+
 Herein lies my quick thoughts on the pathetic Indiana Pacers team, and why I need them to lose game 6 to enjoy watching the rest of the playoffs.
 
 <!--more-->
