@@ -24,6 +24,6 @@ I wanted it to end against the Hawks. I expected it to end against the Wizards. 
 
 <b>Lance Stephenson's trash talk.</b> Really? You're going to sit there as the "occasionally 3rd best player" on a team and try to get in the best player <i>in the league's</i> head? Two losses later I thought he'd back down. But no: in game 5 he <i>blew in James' ear before a foul shot</i>. I know some basketball players didn't go to college, but surely y'all have graduated middle school, the very <i>last</i> time that stunt was socially acceptable. At least you've inspired some great [memes](http://espn.go.com/sportsnation/post/_/id/11001550/lance-stephenson-blows-lebron-ear-sparks-funny-memes).
 
-In short: finish 'em off, Heat. I'd hate to watch a Pacers versus anyone final. That's just the basketball fan in me.
+In short: finish 'em off, Heat. The first-seed Pacers are barely the sixth seed in Western Conference. Their brash childishness must be stopped. I'd hate to watch a Pacers-versus <i>anyone</i> final. If they're going to act petulant, out-of-their-league, and frankly painful-to-watch, count me out. That's just the basketball fan in me.
 
 - GPS
