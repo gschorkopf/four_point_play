@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Facade Pattern In Ruby"
-date: 2014-05-22 13:25:26 -0400
+date: 2014-06-12 13:25:26 -0400
 comments: true
 published: false
 categories: code ruby
@@ -12,4 +12,8 @@ A few months ago I started implementing a pattern that I picked up from some fel
 Turns out, it does have a name (duh), and that name is the [facade pattern](http://en.wikipedia.org/wiki/Facade_pattern).
 
 <!--more-->
+
+Let me give you an example:
+
+```ruby
 
