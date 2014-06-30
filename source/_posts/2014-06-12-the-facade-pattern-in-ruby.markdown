@@ -13,7 +13,35 @@ Turns out, it does have a name (duh), and that name is the [facade pattern](http
 
 <!--more-->
 
-Let me give you an example:
+Let me give you an example. I recently built an app for uploading and sharing your schedule for the Bonnaroo Music Festival. Here's the (gist of a) class that creates schedules:
 
 ```ruby
+class BonnarooSchedule
+  attr_reader :user, :profile_name, :document
 
+  def self.upload(params)
+    new(params).upload
+  end
+
+  def initialize(params)
+    @document = params[:document]
+    @profile_name = params[:profile_name]
+    @user = params[:user]
+  end
+
+  def upload
+    events.each do |event|
+      if show = Show.find_by(artist_name: artist_name(event))
+        # Create the ScheduleShow
+      end
+    end
+  end
+
+  private
+  # Some private methods (like events and artist_name) that
+  # make my life easier
+end
+
+```
+
+Here's the full <a href="http://www.github.com/gschorkopf/roo-pals" target="_blank">open source project</a>, which I intend to share in a future blog post.
