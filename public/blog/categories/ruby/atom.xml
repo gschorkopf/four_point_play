@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Four-Point Play]]></title>
+  <link href="http://four-point-play.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://four-point-play.com/"/>
+  <updated>2014-07-06T16:03:52-04:00</updated>
+  <id>http://four-point-play.com/</id>
+  <author>
+    <name><![CDATA[I.I. and GPS]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Facade Pattern in Ruby]]></title>
+    <link href="http://four-point-play.com/blog/2014/06/12/the-facade-pattern-in-ruby/"/>
+    <updated>2014-06-12T13:25:26-04:00</updated>
+    <id>http://four-point-play.com/blog/2014/06/12/the-facade-pattern-in-ruby</id>
+    <content type="html"><![CDATA[<p>A few months ago I started implementing a pattern that I picked up from some fellow <a href="http://www.bignerdranch.com">Nerds</a>. I sort of blindly used it, not taking the time to figure out why I liked it so much (and not even knowing it had a name) until <a href="https://twitter.com/charliebomber">Charlie</a> pressed me for the big question: &ldquo;great, but why?&rdquo;</p>
+
+<p>Turns out, it does have a name (duh), and that name is the <a href="http://en.wikipedia.org/wiki/Facade_pattern">facade pattern</a>.</p>
+
+<!--more-->
+
+
+<p>Let me give you an example. I recently built an app for uploading and sharing your schedule for the Bonnaroo Music Festival. Here&rsquo;s the (gist of a) class that creates schedules:</p>
+
+<p>```ruby
+class BonnarooSchedule
+  attr_reader :user, :profile_name, :document</p>
+
+<p>  def self.upload(params)</p>
+
+<pre><code>new(params).upload
+</code></pre>
+
+<p>  end</p>
+
+<p>  def initialize(params)</p>
+
+<pre><code>@document = params[:document]
+@profile_name = params[:profile_name]
+@user = params[:user]
+</code></pre>
+
+<p>  end</p>
+
+<p>  def upload</p>
+
+<pre><code>events.each do |event|
+  if show = Show.find_by(artist_name: artist_name(event))
+    # Create the ScheduleShow
+  end
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  private
+  # Some private methods (like events and artist_name) that
+  # make my life easier
+end
+```</p>
+
+<p>Here&rsquo;s the full <a href="http://www.github.com/gschorkopf/roo-pals" target="_blank">open source project</a>, which I intend to share in a future blog post.</p>
+]]></content>
+  </entry>
+  
+</feed>
