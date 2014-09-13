@@ -38,7 +38,7 @@ class BonnarooSchedule
   end
 
   private
-  # Some private methods (slike events and artist_name) that
+  # Some private methods (like events and artist_name) that
   # make my life easier
 end
 
