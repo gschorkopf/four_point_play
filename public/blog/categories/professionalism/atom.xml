@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Professionalism | Four-Point Play]]></title>
-  <link href="http://four-point-play.com/blog/categories/professionalism/atom.xml" rel="self"/>
-  <link href="http://four-point-play.com/"/>
-  <updated>2014-08-07T19:13:10-04:00</updated>
-  <id>http://four-point-play.com/</id>
+  <link href="http://four-point-play.herokuapp.com/blog/categories/professionalism/atom.xml" rel="self"/>
+  <link href="http://four-point-play.herokuapp.com/"/>
+  <updated>2014-09-13T12:14:44-04:00</updated>
+  <id>http://four-point-play.herokuapp.com/</id>
   <author>
-    <name><![CDATA[I.I. and GPS]]></name>
+    <name><![CDATA[Logesh and Geoff]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Professionalism in Medicine]]></title>
-    <link href="http://four-point-play.com/blog/2014/05/15/professionalism-in-medicine/"/>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/15/professionalism-in-medicine/"/>
     <updated>2014-05-15T13:39:00-04:00</updated>
-    <id>http://four-point-play.com/blog/2014/05/15/professionalism-in-medicine</id>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/15/professionalism-in-medicine</id>
     <content type="html"><![CDATA[<p>We are comporting ourselves in every situation, subconsciously considering our role, our expectations, the other parties’ expectations, and our prior experiences. In this coffee shop, I am a customer expecting quiet, because that is the unspoken pact I share with the afternoon crowd that frequents this place. I distinctly remember a philosophy course when I brought up how we are different people to different people, and a Laker purple-and-gold clad loudmouth was taken aback. She seemed to argue that it demonstrated purity to be the same to all people all the time. Maybe it is because we slip so effortlessly into these skins, that some people are unaware. A refusal to acknowledge this socially lubricating farce could underpin those stubborn people who can’t seem to get along with anyone. An inability to adapt can be a stressful way to live.</p>
 
 <p><img src="/images/comic1.jpg" title="Lola Versus" alt="alt text" /></p>

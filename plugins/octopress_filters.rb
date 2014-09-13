@@ -1,9 +1,8 @@
 #custom filters for Octopress
 require './plugins/backtick_code_block'
-require 'jekyll-page-hooks'
-require 'jekyll-sitemap'
-require 'jekyll-date-format'
+require './plugins/post_filters'
 require './plugins/raw'
+require './plugins/date'
 require 'rubypants'
 
 module OctopressFilters
@@ -22,7 +21,7 @@ module OctopressFilters
 end
 
 module Jekyll
-  class ContentFilters < PageHooks
+  class ContentFilters < PostFilter
     include OctopressFilters
     def pre_render(post)
       if post.ext.match('html|textile|markdown|md|haml|slim|xml')
@@ -39,6 +38,7 @@ end
 
 
 module OctopressLiquidFilters
+  include Octopress::Date
 
   # Used on the blog index to split posts on the <!--more--> marker
   def excerpt(input)
@@ -132,3 +132,4 @@ module OctopressLiquidFilters
 
 end
 Liquid::Template.register_filter OctopressLiquidFilters
+

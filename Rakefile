@@ -25,7 +25,7 @@ posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "5000"      # port for preview server eg. localhost:4000
+server_port     = "4000"      # port for preview server eg. localhost:4000
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
@@ -57,7 +57,7 @@ task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  system "jekyll build"
+  system "jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"
@@ -65,7 +65,7 @@ task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
+  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
   trap("INT") {
@@ -81,7 +81,7 @@ task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
+  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
@@ -252,7 +252,7 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do
+  cd "#{deploy_dir}" do 
     system "git pull"
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }

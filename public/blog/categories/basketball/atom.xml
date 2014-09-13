@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Basketball | Four-Point Play]]></title>
-  <link href="http://four-point-play.com/blog/categories/basketball/atom.xml" rel="self"/>
-  <link href="http://four-point-play.com/"/>
-  <updated>2014-08-07T19:13:10-04:00</updated>
-  <id>http://four-point-play.com/</id>
+  <link href="http://four-point-play.herokuapp.com/blog/categories/basketball/atom.xml" rel="self"/>
+  <link href="http://four-point-play.herokuapp.com/"/>
+  <updated>2014-09-13T12:14:44-04:00</updated>
+  <id>http://four-point-play.herokuapp.com/</id>
   <author>
-    <name><![CDATA[I.I. and GPS]]></name>
+    <name><![CDATA[Logesh and Geoff]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Pathetic Pacers]]></title>
-    <link href="http://four-point-play.com/blog/2014/05/29/the-pathetic-pacers/"/>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/29/the-pathetic-pacers/"/>
     <updated>2014-05-29T17:05:49-04:00</updated>
-    <id>http://four-point-play.com/blog/2014/05/29/the-pathetic-pacers</id>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/29/the-pathetic-pacers</id>
     <content type="html"><![CDATA[<p><img src="/images/lance.png" title="Lance Acting a Clown" alt="alt text" /></p>
 
 <p>Herein lies my quick thoughts on the pathetic Indiana Pacers team, and why I need them to lose game 6 to enjoy watching the rest of the playoffs.</p>
@@ -31,7 +31,7 @@
 
 <p>I wanted it to end against the Hawks. I expected it to end against the Wizards. And now I <strong>need</strong> it to end against the Heat. Here&rsquo;s why.</p>
 
-<p><b>The driver of the clown car: Frank Vogel.</b> It&rsquo;s hard to watch, frankly. This is what I mean by pathetic - pathos. I feel bad for the guy. He&rsquo;s in way over his head, and is barely keeping the show on the road. When George, Hibbert, and Stephenson talk to the media or fall apart on the court, it&rsquo;s clearly a reflection on the coach, his style, and the respect he commands.</p>
+<p><b>The driver of the clown car: Frank Vogel.</b> It&rsquo;s hard to watch, frankly. This is what I mean by pathetic &ndash; pathos. I feel bad for the guy. He&rsquo;s in way over his head, and is barely keeping the show on the road. When George, Hibbert, and Stephenson talk to the media or fall apart on the court, it&rsquo;s clearly a reflection on the coach, his style, and the respect he commands.</p>
 
 <p><b>Paul George&rsquo;s immaturity.</b> His 31 in the second half of game 5 was great. Does anyone expect him to repeat that? He&rsquo;s been hailed as a superstar this year. He&rsquo;s not. He&rsquo;s been hailed as their centerpiece, but he hardly brings the playoff room together. And his childish comments that the &ldquo;refs affected game 4&rsquo;s outcome&rdquo;? Did the refs blow you out by 12 points in a game that was never even that close? No. That was the Heat.</p>
 
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[2014 NBA Conference Finals - Part 1]]></title>
-    <link href="http://four-point-play.com/blog/2014/05/20/2014-nba-conference-finals-part-1/"/>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/20/2014-nba-conference-finals-part-1/"/>
     <updated>2014-05-20T16:50:54-04:00</updated>
-    <id>http://four-point-play.com/blog/2014/05/20/2014-nba-conference-finals-part-1</id>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/20/2014-nba-conference-finals-part-1</id>
     <content type="html"><![CDATA[<p>Part 1 in I.I. and GPS&rsquo;s series on the NBA Conference Finals. We talk about whether the Heat should worry, Scotty Brook&rsquo;s tough decision, and Charles Barkley actin' a fool.</p>
 
 <!--more-->

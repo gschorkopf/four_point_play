@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Refactoring Complex Validations From Your Models - Four-Point Play</title>
+  <meta name="author" content="Logesh and Geoff">
+
+  
+  <meta name="description" content="Refactoring Complex Validations From Your Models written May 10th, 2014 in code, rails You&rsquo;ve probably heard the phrase &ldquo;fat models, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Four-Point Play" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+
+</head>
+
+  <body>
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Refactoring Complex Validations From Your Models</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-05-10T18:55:24-04:00" pubdate data-updated="true">May 10<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+        </div>
+        <p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. The misconception of &ldquo;fat models&rdquo;: that it&rsquo;s okay for models to be very large and unwieldy. But when Rails models become a dumping ground for all things even tangentially related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
+
+<!--more-->
+
+
+<p>One way to do that is to pare away complex validations. For example, you might think it wise to drum up a method or two to handle passwords (minimum 8 characters! minimum one number! no weird symbols! etc.) So you throw these methods into the private domain of your User class, and call it a day. But you can (and should) probably move that logic elsewhere.</p>
+
+<p>Let&rsquo;s start with what not to do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>  <span class="n">validate</span> <span class="ss">:password_complexity</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kp">private</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">validate_password_complexity</span>
+</span><span class='line'>    <span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="ss">:password</span><span class="p">,</span> <span class="s2">&quot;must have a number&quot;</span><span class="p">)</span>              <span class="k">if</span> <span class="n">password</span> <span class="o">!~</span> <span class="sr">/(?=.*\d)/</span>
+</span><span class='line'>    <span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="ss">:password</span><span class="p">,</span> <span class="s2">&quot;must have a lowercase letter&quot;</span><span class="p">)</span>    <span class="k">if</span> <span class="n">password</span> <span class="o">!~</span> <span class="sr">/(?=.*[a-z])/</span>
+</span><span class='line'>    <span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="ss">:password</span><span class="p">,</span> <span class="s2">&quot;must have an uppercase letter&quot;</span><span class="p">)</span>   <span class="k">if</span> <span class="n">password</span> <span class="o">!~</span> <span class="sr">/(?=.*[A-Z])/</span>
+</span><span class='line'>    <span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="ss">:password</span><span class="p">,</span> <span class="s2">&quot;must have a special character&quot;</span><span class="p">)</span>   <span class="k">if</span> <span class="n">password</span> <span class="o">!~</span> <span class="sr">/(?=.*[\W])/</span>
+</span><span class='line'>    <span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="ss">:password</span><span class="p">,</span> <span class="s2">&quot;must have at least 8 characters&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">password</span><span class="o">.</span><span class="n">length</span> <span class="o">&lt;</span> <span class="mi">8</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And that&rsquo;s fine. It works. But is password complexity really the User&rsquo;s responsibilty? What if you had an Admin or Account or Enterprise model that required some sort of password? Surely you wouldn&rsquo;t <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">duplicate</a> your efforts there?</p>
+
+<p>So let&rsquo;s simplify our User model down to this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># app/models/user.rb</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>  <span class="n">validates</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">complexity</span><span class="p">:</span> <span class="kp">true</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wow. Such elegant. Very simplicity. <a href="http://knowyourmeme.com/memes/doge">Amaze.</a></p>
+
+<p>But how does this <code>complexity: true</code> work? Behind the scenes, we hide away that original logic that&rsquo;s not even really related to a User. You can inherit from the ActiveModel::EachValidator class, like so:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># app/validators/complexity_validator.rb</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">ComplexityValidator</span> <span class="o">&lt;</span> <span class="ss">ActiveModel</span><span class="p">:</span><span class="ss">:EachValidator</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">validate_each</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">record</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="s2">&quot;must have a number&quot;</span><span class="p">)</span>              <span class="k">if</span> <span class="n">value</span> <span class="o">!~</span> <span class="sr">/(?=.*\d)/</span>
+</span><span class='line'>    <span class="n">record</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="s2">&quot;must have a lowercase letter&quot;</span><span class="p">)</span>    <span class="k">if</span> <span class="n">value</span> <span class="o">!~</span> <span class="sr">/(?=.*[a-z])/</span>
+</span><span class='line'>    <span class="n">record</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="s2">&quot;must have an uppercase letter&quot;</span><span class="p">)</span>   <span class="k">if</span> <span class="n">value</span> <span class="o">!~</span> <span class="sr">/(?=.*[A-Z])/</span>
+</span><span class='line'>    <span class="n">record</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="s2">&quot;must have a special character&quot;</span><span class="p">)</span>   <span class="k">if</span> <span class="n">value</span> <span class="o">!~</span> <span class="sr">/(?=.*[\W])/</span>
+</span><span class='line'>    <span class="n">record</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="s2">&quot;must have at least 8 characters&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">length</span> <span class="o">&lt;</span> <span class="mi">8</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There&rsquo;s a bit of Rails magic here. The &ldquo;Complexity&rdquo; title knows to create a complexity argument. Recall the User model line:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">complexity</span><span class="p">:</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s as easy as that!</p>
+
+<p>And to tidy things up on the view end, consider the following for error handling:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># app/views/users/new.html.erb</span>
+</span><span class='line'><span class="c1"># ...</span>
+</span><span class='line'><span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">label</span><span class="p">:</span> <span class="s2">&quot;New Password&quot;</span><span class="p">,</span> <span class="n">error_method</span><span class="p">:</span> <span class="ss">:to_sentence</span>
+</span><span class='line'><span class="c1"># ...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to_sentence is built into ActiveSupport, and helps us show all errors in a user-friendly way. <a href="http://apidock.com/rails/ActiveSupport/CoreExtensions/Array/Conversions/to_sentence">Check it out</a>.</p>
+
+<p>Shout out to <a href="https://twitter.com/brandon_beacher">Brandon Beacher</a>, who taught me this nifty piece of refactoring.</p>
+
+<ul>
+<li>GPS</li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/05/06/movie-review-lola-versus/" title="Previous Post: Movie Review: Lola Versus">&laquo; Previous: Movie Review: Lola Versus</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/05/15/professionalism-in-medicine/" title="Next Post: Professionalism in Medicine">Next: Professionalism in Medicine &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+
+    
+
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a>. Themed by <a href="https://github.com/sevenadrian/MediumFox">Medium Fox</a>.</h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

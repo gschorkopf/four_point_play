@@ -1,9 +1,7 @@
-require 'net/http'
-require 'uri'
+require 'pygments'
 require 'fileutils'
 require 'digest/md5'
 
-PYGMENTIZE_URL = URI.parse('http://pygmentize.herokuapp.com/')
 PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
@@ -24,14 +22,14 @@ module HighlightCode
         highlighted_code = File.read(path)
       else
         begin
-          highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
+          highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8', :startinline => true})
         rescue MentosError
           raise "Pygments can't parse unknown language: #{lang}."
         end
         File.open(path, 'w') {|f| f.print(highlighted_code) }
       end
     else
-      highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
+      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8', :startinline => true})
     end
     highlighted_code
   end
