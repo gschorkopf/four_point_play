@@ -13,5 +13,3 @@ node_modules
 .preview-mode
 
 .themes/MediumFox/
-
-source/_posts/2014-06-12-the-facade-pattern-in-ruby.markdown
