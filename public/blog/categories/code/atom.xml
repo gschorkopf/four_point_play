@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2014-09-13T12:14:44-04:00</updated>
+  <updated>2014-09-13T12:25:37-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing 'Roo Pals]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/07/06/introducing-roo-pals/"/>
+    <updated>2014-07-06T16:00:36-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/07/06/introducing-roo-pals</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Facade Pattern in Ruby]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/06/12/the-facade-pattern-in-ruby/"/>
+    <updated>2014-06-12T13:25:26-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/06/12/the-facade-pattern-in-ruby</id>
+    <content type="html"><![CDATA[<p>A few months ago I started implementing a pattern that I picked up from some fellow <a href="http://www.bignerdranch.com">Nerds</a>. I sort of blindly used it, not taking the time to figure out why I liked it so much (and not even knowing it had a name) until <a href="https://twitter.com/charliebomber">Charlie</a> pressed me for the big question: &ldquo;great, but why?&rdquo;</p>
+
+<p>Turns out, it does have a name (duh), and that name is the <a href="http://en.wikipedia.org/wiki/Facade_pattern">facade pattern</a>.</p>
+
+<!--more-->
+
+
+<p>Let me give you an example. I recently built an app for uploading and sharing your schedule for the Bonnaroo Music Festival. Here&rsquo;s the (gist of a) class that creates schedules:</p>
+
+<p>```ruby
+class BonnarooSchedule
+  attr_reader :user, :profile_name, :document</p>
+
+<p>  def self.upload(params)</p>
+
+<pre><code>new(params).upload
+</code></pre>
+
+<p>  end</p>
+
+<p>  def initialize(params)</p>
+
+<pre><code>@document = params[:document]
+@profile_name = params[:profile_name]
+@user = params[:user]
+</code></pre>
+
+<p>  end</p>
+
+<p>  def upload</p>
+
+<pre><code>events.each do |event|
+  if show = Show.find_by(artist_name: artist_name(event))
+    # Create the ScheduleShow
+  end
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  private
+  # Some private methods (like events and artist_name) that
+  # make my life easier
+end</p>
+
+<p>```</p>
+
+<p>Here&rsquo;s the full <a href="http://www.github.com/gschorkopf/roo-pals" target="_blank">open source project</a>, which I intend to share in a future blog post.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Refactoring Complex Validations From Your Models]]></title>

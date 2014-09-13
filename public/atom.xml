@@ -4,7 +4,7 @@
   <title><![CDATA[Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2014-09-13T12:14:44-04:00</updated>
+  <updated>2014-09-13T12:25:37-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing 'Roo Pals]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/07/06/introducing-roo-pals/"/>
+    <updated>2014-07-06T16:00:36-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/07/06/introducing-roo-pals</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[World Cup - Days 1 and 2]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/06/23/world-cup-part-1/"/>
+    <updated>2014-06-23T13:10:59-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/06/23/world-cup-part-1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Facade Pattern in Ruby]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/06/12/the-facade-pattern-in-ruby/"/>
+    <updated>2014-06-12T13:25:26-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/06/12/the-facade-pattern-in-ruby</id>
+    <content type="html"><![CDATA[<p>A few months ago I started implementing a pattern that I picked up from some fellow <a href="http://www.bignerdranch.com">Nerds</a>. I sort of blindly used it, not taking the time to figure out why I liked it so much (and not even knowing it had a name) until <a href="https://twitter.com/charliebomber">Charlie</a> pressed me for the big question: &ldquo;great, but why?&rdquo;</p>
+
+<p>Turns out, it does have a name (duh), and that name is the <a href="http://en.wikipedia.org/wiki/Facade_pattern">facade pattern</a>.</p>
+
+<!--more-->
+
+
+<p>Let me give you an example. I recently built an app for uploading and sharing your schedule for the Bonnaroo Music Festival. Here&rsquo;s the (gist of a) class that creates schedules:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">BonnarooSchedule</span>
+</span><span class='line'>  <span class="kp">attr_reader</span> <span class="ss">:user</span><span class="p">,</span> <span class="ss">:profile_name</span><span class="p">,</span> <span class="ss">:document</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</span><span class='line'>    <span class="kp">new</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">upload</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@document</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:document</span><span class="o">]</span>
+</span><span class='line'>    <span class="vi">@profile_name</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:profile_name</span><span class="o">]</span>
+</span><span class='line'>    <span class="vi">@user</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:user</span><span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">upload</span>
+</span><span class='line'>    <span class="n">events</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">event</span><span class="o">|</span>
+</span><span class='line'>      <span class="k">if</span> <span class="n">show</span> <span class="o">=</span> <span class="no">Show</span><span class="o">.</span><span class="n">find_by</span><span class="p">(</span><span class="n">artist_name</span><span class="p">:</span> <span class="n">artist_name</span><span class="p">(</span><span class="n">event</span><span class="p">))</span>
+</span><span class='line'>        <span class="c1"># Create the ScheduleShow</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kp">private</span>
+</span><span class='line'>  <span class="c1"># Some private methods (like events and artist_name) that</span>
+</span><span class='line'>  <span class="c1"># make my life easier</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the full <a href="http://www.github.com/gschorkopf/roo-pals" target="_blank">open source project</a>, which I intend to share in a future blog post.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Pathetic Pacers]]></title>
