@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hand Rolling User Authorization"
-date: 2014-09-17 13:25:26 -0400
+date: 2014-09-22 13:25:26 -0400
 comments: true
 categories: code ruby rails
 ---
