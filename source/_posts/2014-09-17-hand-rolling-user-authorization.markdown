@@ -6,11 +6,11 @@ comments: true
 categories: code ruby rails
 ---
 
-When writing a Rails app, you'll almost always have to employ some form of user authorization. Peeps wanna sign in and be able to see their personal awesomeness. And often enough, certain folks (admins, managers, <a href="http://2.bp.blogspot.com/-W303-_EO37M/TVw1bxG_gRI/AAAAAAAAAjY/cjHl5LiOe3c/s1600/math2.jpg" target="_blank">bad-ass M.C.s</a>) will have specialized permissions. Today, we're going to hand roll authorization into our web app.
+When writing a Rails app, you'll almost always have to employ some form of user authorization. Peeps wanna be able to sign in and see their personal awesomeness. And often enough, certain folks (admins, managers, <a href="http://2.bp.blogspot.com/-W303-_EO37M/TVw1bxG_gRI/AAAAAAAAAjY/cjHl5LiOe3c/s1600/math2.jpg" target="_blank">bad-ass M.C.s</a>) will have specialized permissions. Today, we're going to hand roll authorization into our web app.
 
 <!--more-->
 
-Popular Ruby gems for authorization include <a href="https://github.com/ryanb/cancan" target="_blank">CanCan</a>, <a href="https://github.com/RolifyCommunity/rolify" target="_blank">Rolify</a>, and my personal favorite, <a href="https://github.com/elabs/pundit" target="_blank">Pundit</a>. Today we're going to hand roll our own authorization system, taking some naming queues from the latter.
+Popular Ruby gems for authorization include <a href="https://github.com/ryanb/cancan" target="_blank">CanCan</a>, <a href="https://github.com/RolifyCommunity/rolify" target="_blank">Rolify</a>, and my personal favorite, <a href="https://github.com/elabs/pundit" target="_blank">Pundit</a>. For the purposes of this walkthrough, we'll take some naming queues from the latter.
 
 I'm going to assume you've already handled authentication somewhere in your app. For clarity, authentication is confirming the identity of a user, while authorization is determining the permissions of said user.
 
@@ -18,7 +18,7 @@ I'm going to assume you've already handled authentication somewhere in your app.
 
 <h3>The Task at Hand</h3>
 
-Let's say our app, I don't know, <a href="http://www.github.com/gschorkopf/frolfr/" target="_blank">keeps track of disc golf scorecards</a>. Each scorecard has many (usually 18) "turns," which is representative of a set of shots on a given hole for a given course. Let's say the object looks something like this:
+Let's say our app, I don't know, <a href="http://www.github.com/gschorkopf/frolfr/" target="_blank">keeps track of disc golf scorecards</a>. Each scorecard has many (usually 18) "turns", which is an object that contains the number of shots and par for a given hole on a given course. Let's say the object looks something like this:
 
 ```ruby
 # db/schema.rb
@@ -30,7 +30,7 @@ create_table "turns", force: true do |t|
 end
 ```
 
-For simplicity, let's say we only want the turn's player (user) to be able to <i>update</i> their own score / par / etc.
+For our first task, let's say we only want the turn's player (user) to be able to <i>update</i> their own score / par / etc.
 
 Let's get to work.
 
@@ -38,9 +38,9 @@ Let's get to work.
 
 <h3>Writing a Turn Policy Object</h3>
 
-The key to building out good authorization is writing an understandable policy object. As my buddy <a href="https://twitter.com/srbiv" target="_blank">Stafford</a> says, "naming things is the hardest thing we do in programming."
+As my buddy <a href="https://twitter.com/srbiv" target="_blank">Stafford</a> says, "naming things is the hardest thing we do in programming." The key to building out good authorization is writing an understandable policy object.
 
-I personally like the naming conventions of the Pundit library. A policy object's method and class titles closely mirror the naming of Rails' RESTful resources and model conventions, respectfully.
+In the thoughtful Pundit library, a policy object's method and class titles closely mirror the naming of Rails' RESTful resources and model conventions, respectfully.
 
 Let's test drive this shiz.
 
@@ -68,7 +68,7 @@ describe TurnPolicy do
 end
 ```
 
-Simple enough! The spec creates a mock current user (the signed in user), a mock other user, and a mock turn. That's all we really need to get started.
+Simple enough! The spec creates a mock current user (the signed in user), a mock other user, and a mock turn. It tests that the current user can update a turn. That's all we really need to get started.
 
 When building out the TurnPolicy class, I like to use Structs. They're simple, and we're looking for simplicity here.
 
@@ -78,7 +78,7 @@ class TurnPolicy < Struct.new(:current_user, :turn)
 end
 ```
 
-Note the naming: the class ```TurnPolicy``` mirrors the ```Turn``` model, we place the policy in a policies directory, and pass it our current user (which you will for any policy object you create) and a turn variable. Lovely.
+Note the naming: the class ```TurnPolicy``` mirrors the ```Turn``` model. We place the policy in a policies directory, and pass it our current user (which you will for any policy object you create) and a turn variable. Lovely.
 
 Next, we'll need to build out an ```update?``` method. As you might have guessed based on the name, this can be used in many places: our ```TurnsController#update``` action, our turns' edit page, and anywhere else it's needed. Neat, eh?
 
@@ -121,9 +121,9 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-So we've passed a method called ```authorize``` a boolean value, called ```policy```. If the turn belongs to the user, all is well. If not, well, KABOOM.
+So we've passed a method called ```authorize``` a boolean value, called ```policy```. If the turn belongs to the user, all is well -- otherwise -- "KABOOM.""
 
-Now let's put this method to work.
+Let's put this method to work.
 
 ```ruby
 # app/controllers/turns_controller.rb
@@ -166,15 +166,17 @@ So our view would could now something like this:
 
 ```ruby
 # app/views/turns/index.html.slim
-- @users.each do |user|
+- @scorecards.each do |scorecard|
   tr
-    td = user.initials
-    - user.turns.each do |turn|
+    td = scorecard.user_initials
+    - scorecard.turns.each do |turn|
       - if policy(turn).update?
-        td = link_to turn.score, turn_path(turn), method: :put
+        td = link_to turn.score, turn_path(turn)
       - else
         td = turn.score
 ```
+
+We have a simple conditional that links to the turn page, or simply shows the turn's score.
 
 <hr/>
 
