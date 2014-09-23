@@ -30,19 +30,25 @@
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/06/12/the-facade-pattern-in-ruby/
         </loc>
-        <lastmod>2014-09-13T12:28:10-04:00</lastmod>
+        <lastmod>2014-09-13T14:13:24-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization/
+        </loc>
+        <lastmod>2014-09-23T13:53:36-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/archives/</loc>
-        <lastmod>2014-09-13T12:28:10-04:00</lastmod>
+        <lastmod>2014-09-23T13:53:36-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/</loc>
-        <lastmod>2014-09-13T12:28:10-04:00</lastmod>
+        <lastmod>2014-09-23T13:53:36-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/posts/</loc>
-        <lastmod>2014-09-13T12:28:10-04:00</lastmod>
+        <lastmod>2014-09-23T13:53:36-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/robots.txt</loc>

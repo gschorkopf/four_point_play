@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2014-09-13T12:28:48-04:00</updated>
+  <updated>2014-09-23T13:53:50-04:00</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -12,6 +12,270 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hand Rolling User Authorization]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization/"/>
+    <updated>2014-09-22T13:25:26-04:00</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization</id>
+    <content type="html"><![CDATA[<p>When writing a Rails app, you&rsquo;ll almost always have to employ some form of user authorization. Peeps wanna be able to sign in and see their personal awesomeness. And often enough, certain folks (admins, managers, <a href="http://2.bp.blogspot.com/-W303-_EO37M/TVw1bxG_gRI/AAAAAAAAAjY/cjHl5LiOe3c/s1600/math2.jpg" target="_blank">bad-ass M.C.s</a>) will have specialized permissions. Today, we&rsquo;re going to hand roll authorization into our web app.</p>
+
+<!--more-->
+
+
+<p>Popular Ruby gems for authorization include <a href="https://github.com/ryanb/cancan" target="_blank">CanCan</a>, <a href="https://github.com/RolifyCommunity/rolify" target="_blank">Rolify</a>, and my personal favorite, <a href="https://github.com/elabs/pundit" target="_blank">Pundit</a>. For the purposes of this walkthrough, we&rsquo;ll take some naming queues from the latter.</p>
+
+<p>I&rsquo;m going to assume you&rsquo;ve already handled authentication somewhere in your app. For clarity, authentication is confirming the identity of a user, while authorization is determining the permissions of said user.</p>
+
+<hr/>
+
+
+
+
+<h3>The Task at Hand</h3>
+
+
+<p>Let&rsquo;s say our app, I don&rsquo;t know, <a href="http://www.github.com/gschorkopf/frolfr/" target="_blank">keeps track of disc golf scorecards</a>. Each scorecard has many (usually 18) &ldquo;turns&rdquo;, which is an object that contains the number of shots and par for a given hole on a given course. Let&rsquo;s say the object looks something like this:</p>
+
+<p>```ruby</p>
+
+<h1>db/schema.rb</h1>
+
+<p>create_table &ldquo;turns&rdquo;, force: true do |t|
+  t.integer  &ldquo;user_id&rdquo;
+  t.integer  &ldquo;hole_id&rdquo;
+  t.integer  &ldquo;score&rdquo;
+  t.integer  &ldquo;par&rdquo;, default: 3
+end
+```</p>
+
+<p>For our first task, let&rsquo;s say we only want the turn&rsquo;s player (user) to be able to <i>update</i> their own score / par / etc.</p>
+
+<p>Let&rsquo;s get to work.</p>
+
+<hr/>
+
+
+
+
+<h3>Writing a Turn Policy Object</h3>
+
+
+<p>As my buddy <a href="https://twitter.com/srbiv" target="_blank">Stafford</a> says, &ldquo;naming things is the hardest thing we do in programming.&rdquo; The key to building out good authorization is writing an understandable policy object.</p>
+
+<p>In the thoughtful Pundit library, a policy object&rsquo;s method and class titles closely mirror the naming of Rails' RESTful resources and model conventions, respectfully.</p>
+
+<p>Let&rsquo;s test drive this shiz.</p>
+
+<p>```ruby</p>
+
+<h1>spec/policies/turn_policy_spec.rb</h1>
+
+<p>describe TurnPolicy do
+  subject(:policy) { described_class.new(current_user, turn) }
+  let(:current_user) { double(&lsquo;User&rsquo;) }</p>
+
+<p>  context &lsquo;the turn belongs to the current user&rsquo; do</p>
+
+<pre><code>let(:turn) { double('Turn', user: current_user) }
+
+it 'can update the turn' do
+  expect(subject.update?).to eq true
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  context &lsquo;the turn belongs to another user&rsquo; do</p>
+
+<pre><code>let(:turn) { double('Turn', user: double('User')) }
+
+it 'can not update the turn' do
+  expect(subject.update?).to eq false
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Simple enough! The spec creates a mock current user (the signed in user), a mock other user, and a mock turn. It tests that the current user can update a turn. That&rsquo;s all we really need to get started.</p>
+
+<p>When building out the TurnPolicy class, I like to use Structs. They&rsquo;re simple, and we&rsquo;re looking for simplicity here.</p>
+
+<p>```ruby</p>
+
+<h1>app/policies/turn_policy.rb</h1>
+
+<p>class TurnPolicy &lt; Struct.new(:current_user, :turn)
+end
+```</p>
+
+<p>Note the naming: the class <code>TurnPolicy</code> mirrors the <code>Turn</code> model. We place the policy in a policies directory, and pass it our current user (which you will for any policy object you create) and a turn variable. Lovely.</p>
+
+<p>Next, we&rsquo;ll need to build out an <code>update?</code> method. As you might have guessed based on the name, this can be used in many places: our <code>TurnsController#update</code> action, our turns' edit page, and anywhere else it&rsquo;s needed. Neat, eh?</p>
+
+<p>```ruby</p>
+
+<h1>app/policies/turn_policy.rb</h1>
+
+<p>class TurnPolicy &lt; Struct.new(:current_user, :turn)
+  def update?</p>
+
+<pre><code>turn.user == current_user
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Tada! Now let&rsquo;s apply our <code>update?</code> method elsewhere.</p>
+
+<hr/>
+
+
+
+
+<h3>Applying our Object to Requests</h3>
+
+
+<p>This is what our turn&rsquo;s update action looks like now:</p>
+
+<p>```ruby</p>
+
+<h1>app/controllers/turns_controller.rb</h1>
+
+<p>class TurnsController &lt; ApplicationController
+  def update</p>
+
+<pre><code>@turn = Turn.find(params[:id])
+# Do the updating
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Now we need to raise some sort of error when a bad user attempts to reach this action. Let&rsquo;s make the error reuseable across all our controllers and put it in our ApplicationController. The error can be anything, as long as it prevents the user from doing any updating.</p>
+
+<p>```ruby</p>
+
+<h1>app/controllers/application_controller.rb</h1>
+
+<p>class ApplicationController &lt; ActionController::Base
+  # &hellip;
+  def authorize(policy)</p>
+
+<pre><code>raise KaboomError unless policy
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>So we&rsquo;ve passed a method called <code>authorize</code> a boolean value, called <code>policy</code>. If the turn belongs to the user, all is well &mdash; otherwise &mdash; &ldquo;KABOOM.&rdquo;"</p>
+
+<p>Let&rsquo;s put this method to work.</p>
+
+<p>```ruby</p>
+
+<h1>app/controllers/turns_controller.rb</h1>
+
+<p>class TurnsController &lt; ApplicationController
+  # &hellip;
+  def update</p>
+
+<pre><code>@turn = Turn.find(params[:id])
+
+authorize policy(turn).update?
+
+# Do the updating
+</code></pre>
+
+<p>  end</p>
+
+<p>  def policy(turn)</p>
+
+<pre><code>TurnPolicy.new(current_user, turn)
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>We define our policy in a new method. We then use the <code>authorize</code> method and our <code>update?</code> method to authorize the action.</p>
+
+<hr/>
+
+
+
+
+<h3>Applying our Object to Views</h3>
+
+
+<p>Finally, let&rsquo;s say we have a scorecard page, which is also our turns#index action. It&rsquo;s a simple table with all turns for that scorecard, as well as the ability to edit any score in place. Any user can view the scorecard; it&rsquo;s public. But only the turn&rsquo;s owner can edit a turn. In our TurnsController, we can turn our <code>policy</code> method into a nifty helper method.</p>
+
+<p>```ruby</p>
+
+<h1>app/controllers/turns_controller.rb</h1>
+
+<p>class TurnsController &lt; ApplicationController
+  # &hellip;
+  helper_method :policy
+  def policy(turn)</p>
+
+<pre><code>TurnPolicy.new(current_user, turn)
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>So our view would could now something like this:</p>
+
+<p>```ruby</p>
+
+<h1>app/views/turns/index.html.slim</h1>
+
+<ul>
+<li>@scorecards.each do |scorecard|
+tr
+  td = scorecard.user_initials
+
+<ul>
+<li>scorecard.turns.each do |turn|
+
+<ul>
+<li>if policy(turn).update?
+td = link_to turn.score, turn_path(turn)</li>
+<li>else
+td = turn.score
+```</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>We have a simple conditional that links to the turn page, or simply shows the turn&rsquo;s score.</p>
+
+<hr/>
+
+
+
+
+<h3>Conclusion</h3>
+
+
+<p>Hand rolling your own tools can remove dependencies, allows programmers unfamiliar with certain libraries to check out the policies within your own source code, and is just fun to try out.</p>
+
+<ul>
+<li>GPS</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Facade Pattern in Ruby]]></title>
@@ -59,7 +323,7 @@ end
 <p>  end</p>
 
 <p>  private
-  # Some private methods (slike events and artist_name) that
+  # Some private methods (like events and artist_name) that
   # make my life easier
 end</p>
 
