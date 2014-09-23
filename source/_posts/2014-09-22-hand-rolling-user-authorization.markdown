@@ -10,7 +10,7 @@ When writing a Rails app, you'll almost always have to employ some form of user 
 
 <!--more-->
 
-Popular Ruby gems for authorization include <a href="https://github.com/ryanb/cancan" target="_blank">CanCan</a>, <a href="https://github.com/RolifyCommunity/rolify" target="_blank">Rolify</a>, and my personal favorite, <a href="https://github.com/elabs/pundit" target="_blank">Pundit</a>. For the purposes of this walkthrough, we'll take some naming queues from the latter.
+Popular Ruby gems for authorization include <a href="https://github.com/ryanb/cancan" target="_blank">CanCan</a>, <a href="https://github.com/RolifyCommunity/rolify" target="_blank">Rolify</a>, and my personal favorite, <a href="https://github.com/elabs/pundit" target="_blank">Pundit</a>. For the purposes of this walkthrough, we'll take some naming cues from the latter.
 
 I'm going to assume you've already handled authentication somewhere in your app. For clarity, authentication is confirming the identity of a user, while authorization is determining the permissions of said user.
 
