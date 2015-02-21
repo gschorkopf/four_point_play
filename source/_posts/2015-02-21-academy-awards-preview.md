@@ -12,7 +12,7 @@ My prognostications for the major Academy Awards.
 
 <!--more-->
 
-####Best Supporting Actor
+##Best Supporting Actor
 
 Nominees - Robert Duvall (*The Judge*), Ethan Hawke (*Boyhood*), Edward Norton (*Birdman*), Mark Ruffalo (*Foxcatcher*), J.K. Simmons (*Whiplash*)
 
@@ -25,19 +25,19 @@ Not having seen this film until after my Oscars post, I am in elation that it is
 ***
 ![alt text](http://media1.onsugar.com/files/2014/07/02/018/n/1922283/53ec746af1a7bba0_pat2.xxxlarge.jpg "Awwwww")
 
-####Best Supporting Actress
-Nominees - Patricia Arquette (*Boyhood*), Laura Dern (*Wild*), Keira Knightley (*The Imitation Game*), Emma Stone (*Birdman*), Meryl Streep (*Into The Woods*)
+##Best Supporting Actress
+Nominees - Patricia Arquette (Boyhood), Laura Dern (Wild), Keira Knightley (The Imitation Game), Emma Stone (Birdman), Meryl Streep (Into The Woods)
 
 Should win - **Patricia Arquette**
 
 Will win - **Patricia Arquette**
 
-I haven't seen most of the films in this category, but Arquette has won the SAG, BAFTA (UK Oscars), and GG. Her performance culminates in a speech to Mason as he packs for college - she thought there would me more. It is so heartwrenching after witnessing all her tribulations with abusive husbands to see a mom want more time with her son. Or think that the time would have meant something more. I remember my mom feeling the same way when I went off to college, and I'm sure the feeling of separation is univeral among [all moms](http://www.hiphopearly.com/Drake-You-The-6-t27119.html).
+I haven't seen most of the films in this category, but Arquette has won the SAG, BAFTA (UK Oscars), and GG. Her performance culminates in a speech to Mason as he packs for college - she thought there would be more. It is so heartwrenching after witnessing all her tribulations with abusive husbands to see a mom want more time with her son. Or think that the time would have meant something more. I remember my mom feeling the same way when I went off to college, and I'm sure the feeling of separation is univeral among [all moms](http://www.hiphopearly.com/Drake-You-The-6-t27119.html).
 
 ***
 ![alt text](http://cdn.collider.com/wp-content/uploads/inherent-vice-image-joaquin-phoenix-katherine-waterston-joanna-newsom.jpg "Ouija!")
 
-####Best Adapted Screenplay
+##Best Adapted Screenplay
 Nominees - *American Sniper*, *The Imitation Game*, *Inherent Vice*, *The Theory of Everything*, *Whiplash*
 
 Should win - **_Inherent Vice_**
@@ -48,7 +48,7 @@ What I've been hearing on the interwebs is that the Weinstein company has been p
 
 ***
 ![alt text](https://cdn2.thedissolve.com/features/464/fullwidth.e4b3e81c.JPG "Agatha & Zero")
-####Best Original Screenplay
+##Best Original Screenplay
 Nominees - *Birdman*, *Boyhood*, *Foxcatcher*, *The Grand Budapest Hotel*, *Nightcrawler*
 
 Should win - ***The Grand Budapest Hotel***
@@ -59,7 +59,7 @@ If you don't remember, *The Grand Budapest Hotel's* narrative structure is as fo
 
 ***
 ![alt text](http://www.northcoastjournal.com/imager/b/original/2489631/c58a/Filmland.jpg "Boo - fuck you Batman")
-####Best Animated Film
+##Best Animated Film
 Nominees - *Big Hero 6*, *The Boxtrolls*, *How To Train Your Dragon 2*, *Song Of The Sea*, *The Tale Of The Princess Kaguya*
 
 Should win - ***The Lego Movie*** (not nominated)
@@ -71,7 +71,7 @@ Will win - ***How To Train Your Dragon 2***
 ***
 ![alt text](http://cdn.theatlantic.com/assets/media/img/posts/2015/02/Theory_of_Everything/8ef785ca3.jpg "Who?")
 
-####Best Actor
+##Best Actor
 Nominees - Steve Carell (*Foxcatcher*), Bradley Cooper (*American Sniper*), Benedictus Cumbersnoot (*The Imitation Game*), Michael Keaton (*Birdman*), Eddie Redmayne (*The Theory of Everything*)
 
 Should win - **Ralph Fiennes** (*The Grand Budapest Hotel*), **Jake Gyllenhaal** (*Nightcrawler*), **Oscar Isaac** (*A Most Violent Year*), or **David Oyelowo** (*Selma*) (None nominated)
@@ -82,7 +82,7 @@ The Academy loves gimmicks - Tom Hanks for *Forrest Gump*, Dustin Hoffman for *R
 
 ***
 ![alt text](http://moviemezzanine.com/wp-content/uploads/GONE-GIRL-Movie-HD-Trailer-Captures00004_1_11.jpg "So scary")
-#####Best Actress
+##Best Actress
 Nominees - Marion Cotillard (*Two Days, One Night*), Felicity Jones (*The Theory Of Everything*), Julianne Moore (*Still Alice*), Rosamund Pike (*Gone Girl*), Reese Witherspoon (*Wild*)
 
 Should win - **Rosamund Pike** (actually **Scarlett Johansson** if she was nominated for *Under The Skin*)
@@ -93,8 +93,8 @@ I haven't seen *Still Alice*, but Julianne Moore is excellent in everything she'
 
 ***
 ![alt text](http://d1oi7t5trwfj5d.cloudfront.net/a1/1a03f0946511e1bcc4123138165f92/file/the-films-of-richard-linklater-a-retrospective.jpg "This guy")
-####Best Director
-Nominees - Alejandro González Iñárritu (*Birdman*), Richard Linklater (*Boyhood*), Bennett Miller (*Foxcatcher*), Wes Anderson (*The Grand Budapest Hotel*), Morten Tyldum (*The Imitation Game*)
+##Best Director
+Nominees - Alejandro González Iñárritu (Birdman), Richard Linklater (Boyhood), Bennett Miller (Foxcatcher), Wes Anderson (The Grand Budapest Hotel), Morten Tyldum (The Imitation Game)
 
 Who should win - **Ava DuVernay** for *Selma* (not nominated)
 
@@ -103,7 +103,7 @@ Who will win - **Richard Linkater**
 I went to a Q & A with Richard Linklater when I was up in NYC. It was so cool! He's just as jovial and insightful in real life as I hoped he would be! Too bad my question was passed up for some other assholes at Apple SoHo who wouldn't know how to address a brick, much less a legendary director. Yeesh. Anyway, Iñárritu is the other favorite in this category, and he won the DGA, while Linklater won all the other awards. I hope the voters don't deny the vision and patience of the 12-year spectacle that is *Boyhood*.
 ***
 ![alt text](http://www.selmamovie.com/images/photos/10.jpg "MLK")
-####Best Picture
+##Best Picture
 Nominees - *American Sniper*, *Birdman*, *Boyhood*, *The Grand Budapest Hotel*, *The Imitation Game*, *Selma*, *The Theory Of Everything*, *Whiplash*
 
 Should win - ***Selma***
