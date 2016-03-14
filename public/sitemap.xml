@@ -2,76 +2,80 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2014/05/06/movie-review-lola-versus/</loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models/
         </loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/05/15/professionalism-in-medicine/
         </loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/05/20/2014-nba-conference-finals-part-1/
         </loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2014/05/29/the-pathetic-pacers/</loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization/
         </loc>
-        <lastmod>2014-09-23T17:58:32-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2014/11/19/nba-preview/</loc>
-        <lastmod>2014-11-20T12:48:22-05:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2014/12/31/top-100-songs-of-2014/</loc>
-        <lastmod>2015-01-09T11:35:51-05:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://four-point-play.herokuapp.com/blog/2014/12/31/top-100-songs-of-2015/</loc>
+        <lastmod>2016-03-13T23:12:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2014/12/31/top-25-albums-of-2014/</loc>
-        <lastmod>2015-01-09T11:35:51-05:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2015/01/01/top-10-films-of-2014/</loc>
-        <lastmod>2015-02-11T17:05:54-05:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/2015/02/21/academy-awards-preview/</loc>
-        <lastmod>2015-02-21T11:56:37-05:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://four-point-play.herokuapp.com/blog/2015/04/17/2015-nba-playoff-predictions/
         </loc>
-        <lastmod>2015-04-28T11:45:03-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/blog/archives/</loc>
-        <lastmod>2015-04-28T11:45:03-04:00</lastmod>
+        <lastmod>2016-03-13T23:12:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/</loc>
-        <lastmod>2015-04-28T11:45:03-04:00</lastmod>
+        <lastmod>2016-03-13T23:12:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/posts/</loc>
-        <lastmod>2015-04-28T11:45:03-04:00</lastmod>
+        <lastmod>2016-03-13T23:12:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://four-point-play.herokuapp.com/robots.txt</loc>
-        <lastmod>2014-09-13T12:10:38-04:00</lastmod>
+        <lastmod>2016-03-13T23:11:35-04:00</lastmod>
     </url>
 </urlset>
