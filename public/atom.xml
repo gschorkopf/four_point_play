@@ -4,7 +4,7 @@
   <title><![CDATA[Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2016-03-14T00:39:16-04:00</updated>
+  <updated>2016-12-31T23:03:24+06:30</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -14,10 +14,34 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Daily]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2017/01/01/the-daily/"/>
+    <updated>2017-01-01T00:00:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2017/01/01/the-daily</id>
+    <content type="html"><![CDATA[<ol>
+<li>. Trump. Cruz and his booger. The whole election. Justice for a gorilla. Shooting in Orlando. Attack in Nice.  Death of David Bowie. Death of Muhammad Ali. Death of [Prince symbol]. Death of [insert name here].</li>
+</ol>
+
+
+<p>But at least a girl named [Jenna] wants a little of my time.</p>
+
+<p>It&rsquo;s 2017. And I am going to make it through this year, if it kills me.</p>
+
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0Cug9j2T7MHK4k8hUEGQ43" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ii6kJaGiRaI" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Top 25 Albums of 2015]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2015/12/31/top-25-albums-of-2015/"/>
-    <updated>2015-12-31T18:59:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2015/12/31/top-25-albums-of-2015</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2016/01/01/top-25-albums-of-2015/"/>
+    <updated>2016-01-01T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2016/01/01/top-25-albums-of-2015</id>
     <content type="html"><![CDATA[<p>Here are my top 25 albums of 2015, following up from my list of <a href="http://four-point-play.herokuapp.com/blog/2015/12/31/top-100-songs-of-2015/">top 100 songs of the year</a>.</p>
 
 <p><img src="http://cdn.sidewalkhustle.netdna-cdn.com/wp-content/uploads/2015/11/Panda-Bear-Crosswords.jpg" /></p>
@@ -104,9 +128,9 @@ Bully - Feels Like<br>
   
   <entry>
     <title type="html"><![CDATA[Top 100 Songs of 2015]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2015/12/31/top-100-songs-of-2015/"/>
-    <updated>2015-12-31T18:59:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2015/12/31/top-100-songs-of-2015</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2016/01/01/top-100-songs-of-2015/"/>
+    <updated>2016-01-01T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2016/01/01/top-100-songs-of-2015</id>
     <content type="html"><![CDATA[<p>Rules: Song must be on a release this year, no more than 2 songs per artist. Also, if the track was used in last year&rsquo;s list, it cannot make this year&rsquo;s (IE: on an EP, now on a LP). Spotify playlist below. Let&rsquo;s do this.</p>
 
 <p><img src="http://i1.imgiz.com/rshots/8644/rihanna-bitch-better-have-my-money-explicit_8644390-2193_1280x720.jpg" /></p>
@@ -255,7 +279,7 @@ Bully - Feels Like<br>
   <entry>
     <title type="html"><![CDATA[2015 NBA Playoff Predictions]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2015/04/17/2015-nba-playoff-predictions/"/>
-    <updated>2015-04-17T08:00:00-04:00</updated>
+    <updated>2015-04-17T18:30:00+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2015/04/17/2015-nba-playoff-predictions</id>
     <content type="html"><![CDATA[<p>Logesh and Geoff&rsquo;s ridiculously <s>uninformed</s> <b>bold</b> NBA playoff finals predictions:</p>
 
@@ -439,7 +463,7 @@ Bully - Feels Like<br>
   <entry>
     <title type="html"><![CDATA[The Academy Awards Preview]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2015/02/21/academy-awards-preview/"/>
-    <updated>2015-02-21T07:00:00-05:00</updated>
+    <updated>2015-02-21T18:30:00+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2015/02/21/academy-awards-preview</id>
     <content type="html"><![CDATA[<p>My prognostications for the major Academy Awards.</p>
 
@@ -578,9 +602,9 @@ Bully - Feels Like<br>
   
   <entry>
     <title type="html"><![CDATA[Top 10 Films of 2014]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2015/01/01/top-10-films-of-2014/"/>
-    <updated>2015-01-01T18:59:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2015/01/01/top-10-films-of-2014</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2015/01/02/top-10-films-of-2014/"/>
+    <updated>2015-01-02T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2015/01/02/top-10-films-of-2014</id>
     <content type="html"><![CDATA[<p>My ranking of the best 10 movies that came out last year. And a little bit about them.</p>
 
 <p><img src="http://1.bp.blogspot.com/-g1tCfxUzCQk/VFsGJeJPGWI/AAAAAAAABOQ/Mki712aPUcI/s1600/6vFcgup.jpg" /></p>
@@ -650,9 +674,9 @@ Bully - Feels Like<br>
   
   <entry>
     <title type="html"><![CDATA[Top 25 Albums of 2014]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/12/31/top-25-albums-of-2014/"/>
-    <updated>2014-12-31T18:59:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/12/31/top-25-albums-of-2014</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2015/01/01/top-25-albums-of-2014/"/>
+    <updated>2015-01-01T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2015/01/01/top-25-albums-of-2014</id>
     <content type="html"><![CDATA[<p>Here are my top 25 albums of 2014, following up from my list of <a href="http://four-point-play.herokuapp.com/blog/2014/12/31/top-100-songs-of-2014/">top 100 songs of the year</a>.</p>
 
 <p><img src="http://dbfestivalcom.c.presscdn.com/wp-content/uploads/2013/05/shabazz.jpg" /></p>
@@ -739,9 +763,9 @@ The Antlers - Familiars<br>
   
   <entry>
     <title type="html"><![CDATA[Top 100 Songs of 2014]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/12/31/top-100-songs-of-2014/"/>
-    <updated>2014-12-31T18:59:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/12/31/top-100-songs-of-2014</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2015/01/01/top-100-songs-of-2014/"/>
+    <updated>2015-01-01T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2015/01/01/top-100-songs-of-2014</id>
     <content type="html"><![CDATA[<p>Rules: Song must be on a release this year, no more than 2 songs per artist. Also, if the track was used in last year&rsquo;s list, it cannot make this year&rsquo;s (IE: on an EP, now on a LP). Spotify playlist below. Let&rsquo;s do this.</p>
 
 <p><img src="http://www.weallwantsomeone.org/wp-content/uploads/2013/01/Foxygen-San-Francisco.png" /></p>
@@ -889,9 +913,9 @@ The Antlers - Familiars<br>
   
   <entry>
     <title type="html"><![CDATA[Logesh and Geoff's NBA Preview 2014-15]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/11/19/nba-preview/"/>
-    <updated>2014-11-19T18:20:00-05:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/11/19/nba-preview</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/11/20/nba-preview/"/>
+    <updated>2014-11-20T05:50:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/11/20/nba-preview</id>
     <content type="html"><![CDATA[<p>It&rsquo;s Logesh and Geoff&rsquo;s (belated) NBA Preview for 2014-15!</p>
 
 <hr />
@@ -1084,7 +1108,7 @@ The Antlers - Familiars<br>
   <entry>
     <title type="html"><![CDATA[Hand Rolling User Authorization]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization/"/>
-    <updated>2014-09-22T13:25:26-04:00</updated>
+    <updated>2014-09-22T23:55:26+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization</id>
     <content type="html"><![CDATA[<p>When writing a Rails app, you&rsquo;ll almost always have to employ some form of user authorization. Peeps wanna be able to sign in and see their personal awesomeness. And often enough, certain folks (admins, managers, <a href="http://2.bp.blogspot.com/-W303-_EO37M/TVw1bxG_gRI/AAAAAAAAAjY/cjHl5LiOe3c/s1600/math2.jpg" target="_blank">bad-ass M.C.s</a>) will have specialized permissions. Today, we&rsquo;re going to hand roll authorization into our web app.</p>
 
@@ -1377,9 +1401,9 @@ The Antlers - Familiars<br>
   
   <entry>
     <title type="html"><![CDATA[The Pathetic Pacers]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/05/29/the-pathetic-pacers/"/>
-    <updated>2014-05-29T17:05:49-04:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/05/29/the-pathetic-pacers</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/30/the-pathetic-pacers/"/>
+    <updated>2014-05-30T03:35:49+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/30/the-pathetic-pacers</id>
     <content type="html"><![CDATA[<p><img src="http://four-point-play.herokuapp.com/images/lance.png" title="Lance Acting a Clown" alt="alt text" /></p>
 
 <p>Herein lies my quick thoughts on the pathetic Indiana Pacers team, and why I need them to lose game 6 to enjoy watching the rest of the playoffs.</p>
@@ -1410,9 +1434,9 @@ The Antlers - Familiars<br>
   
   <entry>
     <title type="html"><![CDATA[2014 NBA Conference Finals - Part 1]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/05/20/2014-nba-conference-finals-part-1/"/>
-    <updated>2014-05-20T16:50:54-04:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/05/20/2014-nba-conference-finals-part-1</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/21/2014-nba-conference-finals-part-1/"/>
+    <updated>2014-05-21T03:20:54+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/21/2014-nba-conference-finals-part-1</id>
     <content type="html"><![CDATA[<p>Part 1 in I.I. and GPS&rsquo;s series on the NBA Conference Finals. We talk about whether the Heat should worry, Scotty Brook&rsquo;s tough decision, and Charles Barkley actin&#8217; a fool.</p>
 
 <!--more-->
@@ -1450,7 +1474,7 @@ The Antlers - Familiars<br>
   <entry>
     <title type="html"><![CDATA[Professionalism in Medicine]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2014/05/15/professionalism-in-medicine/"/>
-    <updated>2014-05-15T13:39:00-04:00</updated>
+    <updated>2014-05-15T13:39:00+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2014/05/15/professionalism-in-medicine</id>
     <content type="html"><![CDATA[<p>We are comporting ourselves in every situation, subconsciously considering our role, our expectations, the other parties’ expectations, and our prior experiences. In this coffee shop, I am a customer expecting quiet, because that is the unspoken pact I share with the afternoon crowd that frequents this place. I distinctly remember a philosophy course when I brought up how we are different people to different people, and a Laker purple-and-gold clad loudmouth was taken aback. She seemed to argue that it demonstrated purity to be the same to all people all the time. Maybe it is because we slip so effortlessly into these skins, that some people are unaware. A refusal to acknowledge this socially lubricating farce could underpin those stubborn people who can’t seem to get along with anyone. An inability to adapt can be a stressful way to live.</p>
 
@@ -1494,9 +1518,9 @@ The Antlers - Familiars<br>
   
   <entry>
     <title type="html"><![CDATA[Refactoring Complex Validations From Your Models]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models/"/>
-    <updated>2014-05-10T18:55:24-04:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/11/refactoring-complex-validations-from-your-models/"/>
+    <updated>2014-05-11T05:25:24+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/11/refactoring-complex-validations-from-your-models</id>
     <content type="html"><![CDATA[<p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. The misconception of &ldquo;fat models&rdquo;: that it&rsquo;s okay for models to be very large and unwieldy. But when Rails models become a dumping ground for all things even tangentially related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
 
 <!--more-->
@@ -1613,7 +1637,7 @@ The Antlers - Familiars<br>
   <entry>
     <title type="html"><![CDATA[Movie Review: Lola Versus]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2014/05/06/movie-review-lola-versus/"/>
-    <updated>2014-05-06T19:06:00-04:00</updated>
+    <updated>2014-05-06T19:06:00+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2014/05/06/movie-review-lola-versus</id>
     <content type="html"><![CDATA[<p><img src="http://four-point-play.herokuapp.com/images/Lola_Versus.jpg" title="Lola Versus" alt="alt text" /></p>
 

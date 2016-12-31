@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2016-03-14T00:39:16-04:00</updated>
+  <updated>2016-12-31T23:03:24+06:30</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Hand Rolling User Authorization]]></title>
     <link href="http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization/"/>
-    <updated>2014-09-22T13:25:26-04:00</updated>
+    <updated>2014-09-22T23:55:26+06:30</updated>
     <id>http://four-point-play.herokuapp.com/blog/2014/09/22/hand-rolling-user-authorization</id>
     <content type="html"><![CDATA[<p>When writing a Rails app, you&rsquo;ll almost always have to employ some form of user authorization. Peeps wanna be able to sign in and see their personal awesomeness. And often enough, certain folks (admins, managers, <a href="http://2.bp.blogspot.com/-W303-_EO37M/TVw1bxG_gRI/AAAAAAAAAjY/cjHl5LiOe3c/s1600/math2.jpg" target="_blank">bad-ass M.C.s</a>) will have specialized permissions. Today, we&rsquo;re going to hand roll authorization into our web app.</p>
 
@@ -279,9 +279,9 @@ td = turn.score
   
   <entry>
     <title type="html"><![CDATA[Refactoring Complex Validations From Your Models]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models/"/>
-    <updated>2014-05-10T18:55:24-04:00</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2014/05/10/refactoring-complex-validations-from-your-models</id>
+    <link href="http://four-point-play.herokuapp.com/blog/2014/05/11/refactoring-complex-validations-from-your-models/"/>
+    <updated>2014-05-11T05:25:24+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2014/05/11/refactoring-complex-validations-from-your-models</id>
     <content type="html"><![CDATA[<p>You&rsquo;ve probably heard the phrase &ldquo;fat models, skinny controllers&rdquo; before. The misconception of &ldquo;fat models&rdquo;: that it&rsquo;s okay for models to be very large and unwieldy. But when Rails models become a dumping ground for all things even tangentially related to the original class, it&rsquo;s probably time to trim off a few pounds.</p>
 
 <!--more-->
