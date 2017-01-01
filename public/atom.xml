@@ -4,7 +4,7 @@
   <title><![CDATA[Four-Point Play]]></title>
   <link href="http://four-point-play.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://four-point-play.herokuapp.com/"/>
-  <updated>2016-12-31T23:03:24+06:30</updated>
+  <updated>2017-01-01T08:56:53+06:30</updated>
   <id>http://four-point-play.herokuapp.com/</id>
   <author>
     <name><![CDATA[Logesh and Geoff]]></name>
@@ -14,18 +14,22 @@
 
   
   <entry>
-    <title type="html"><![CDATA[The Daily]]></title>
-    <link href="http://four-point-play.herokuapp.com/blog/2017/01/01/the-daily/"/>
-    <updated>2017-01-01T00:00:00+06:30</updated>
-    <id>http://four-point-play.herokuapp.com/blog/2017/01/01/the-daily</id>
-    <content type="html"><![CDATA[<ol>
-<li>. Trump. Cruz and his booger. The whole election. Justice for a gorilla. Shooting in Orlando. Attack in Nice.  Death of David Bowie. Death of Muhammad Ali. Death of [Prince symbol]. Death of [insert name here].</li>
-</ol>
+    <title type="html"><![CDATA[The Daily - 'This Year' by the Mountain Goats]]></title>
+    <link href="http://four-point-play.herokuapp.com/blog/2017/01/02/the-daily/"/>
+    <updated>2017-01-02T06:29:00+06:30</updated>
+    <id>http://four-point-play.herokuapp.com/blog/2017/01/02/the-daily</id>
+    <content type="html"><![CDATA[<p>&ldquo;This Year&rdquo; by The Mountain Goats.</p>
+
+<p><img src="http://the-toast.net/wp-content/uploads/2015/10/TMG2011a.jpg" /></p>
+
+<!--more-->
 
 
-<p>But at least a girl named [Jenna] wants a little of my time.</p>
+<p>Ah, 2016. Trump. Cruz and his booger. The whole election. Justice for a gorilla. Shooting in Orlando. Attack in Nice. Syria. Death of David Bowie. Death of Muhammad Ali. Death of [Prince symbol]. Death of [insert name here].</p>
 
-<p>It&rsquo;s 2017. And I am going to make it through this year, if it kills me.</p>
+<p>But at least &ldquo;a girl named [Jenna] wants a little of my time&rdquo;.</p>
+
+<p>It&rsquo;s 2017. &ldquo;And I am going to make it through this year, if it kills me.&rdquo;</p>
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0Cug9j2T7MHK4k8hUEGQ43" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 

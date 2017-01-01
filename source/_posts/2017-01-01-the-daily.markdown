@@ -1,16 +1,22 @@
 ---
 layout: post
-title: "The Daily - "This Year" by The Mountain Goats"
+title: "The Daily - 'This Year' by The Mountain Goats"
 date: 2017-01-01 23:59:00 -0000
 comments: true
-categories: music, daily
+categories: music daily
 ---
 
-2016. Trump. Cruz and his booger. The whole election. Justice for a gorilla. Shooting in Orlando. Attack in Nice.  Death of David Bowie. Death of Muhammad Ali. Death of [Prince symbol]. Death of [insert name here].
+"This Year" by The Mountain Goats.
 
-But at least a girl named [Jenna] wants a little of my time.
+<img src="http://the-toast.net/wp-content/uploads/2015/10/TMG2011a.jpg" />
 
-It's 2017. And I am going to make it through this year, if it kills me.
+<!--more-->
+
+Ah, 2016. Trump. Cruz and his booger. The whole election. Justice for a gorilla. Shooting in Orlando. Attack in Nice. Syria. Death of David Bowie. Death of Muhammad Ali. Death of [Prince symbol]. Death of [insert name here].
+
+But at least "a girl named [Jenna] wants a little of my time".
+
+It's 2017. "And I am going to make it through this year, if it kills me."
 
 <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0Cug9j2T7MHK4k8hUEGQ43" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
